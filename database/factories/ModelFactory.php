@@ -14,3 +14,10 @@ $factory->define(App\Entities\Country::class, function (Faker\Generator $faker) 
         'country' => $faker->country,
     ];
 });
+
+$factory->define(App\Entities\City::class, function (Faker\Generator $faker) {
+    return [
+        'city' => $faker->city,
+        'country_id' => 1,
+    ];
+});
