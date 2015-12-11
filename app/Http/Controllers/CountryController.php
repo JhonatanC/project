@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Entities\Entry;
+use App\Entities\Country;
 
-class FrontendController extends Controller
+class CountryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,8 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        $entry = Entry::get();
-        //return $entry;
-        return view('eventos', compact($entry));
+        $countries = Country::get();
+        return view('country.index',compact('countries'));
     }
 
     /**
@@ -29,7 +28,7 @@ class FrontendController extends Controller
      */
     public function create()
     {
-        //
+        return view('country.create');
     }
 
     /**

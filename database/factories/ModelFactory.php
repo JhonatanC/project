@@ -18,6 +18,6 @@ $factory->define(App\Entities\Country::class, function (Faker\Generator $faker) 
 $factory->define(App\Entities\City::class, function (Faker\Generator $faker) {
     return [
         'city' => $faker->city,
-        'country_id' => 1,
+        'country_id' => rand(1,3),
     ];
 });
