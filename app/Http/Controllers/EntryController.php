@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Entities\Entry;
 
-use App\Entities\Country;
-use App\Http\Requests\CountryRequest;
+use App\Entities\MainMenu;
+use App\Entities\SubMenuMain;
 
-class CountryController extends Controller
+class EntryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +20,11 @@ class CountryController extends Controller
      */
     public function index()
     {
-        $countries = Country::get();
-        return view('country.index',compact('countries'));
+        $entries = Entry::get();
+        $menu = MainMenu::get();
+        $subMenu = SubMenuMain::get();
+
+        return view('entry.index',compact('entries','menu','subMenu'));
     }
 
     /**
@@ -29,7 +34,7 @@ class CountryController extends Controller
      */
     public function create()
     {
-        return view('country.create');
+        //
     }
 
     /**
@@ -38,10 +43,9 @@ class CountryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CountryRequest $request)
+    public function store(Request $request)
     {
-        $countries = Country::create($request->all());
-        return redirect('paises');
+        //
     }
 
     /**

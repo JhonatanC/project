@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::resource('eventos', 'FrontendController@index');
 Route::resource('paises', 'CountryController');
+Route::resource('entries','EntryController');

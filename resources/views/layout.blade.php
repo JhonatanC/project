@@ -17,7 +17,8 @@
 <body>
 
     <section class="container">
-        <h1>Bootstrap Y Laravel 5.1</h1>
+        <h1>Bootstrap, AngularJs Y Laravel 5.1</h1>
+    @yield('content')
     </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
