@@ -14,4 +14,5 @@ class MainMenu extends Model
         'class',
         'level'
     ];
+
 }

@@ -8,8 +8,6 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Entities\Entry;
 
-use App\Entities\MainMenu;
-use App\Entities\SubMenuMain;
 
 class EntryController extends Controller
 {
@@ -21,10 +19,7 @@ class EntryController extends Controller
     public function index()
     {
         $entries = Entry::get();
-        $menu = MainMenu::get();
-        $subMenu = SubMenuMain::get();
-
-        return view('entry.index',compact('entries','menu','subMenu'));
+        return view('entry.index',compact('entries'));
     }
 
     /**
